@@ -25,20 +25,22 @@ class TForm2 : public TForm {
 	TButton *wallpaperButton;
 	TImage *Image1;
 	TOpenPictureDialog *OpenPictureDialog1;
-	TSpinEdit *SpinEdit1;
-	TSpinEdit *SpinEdit2;
+	TSpinEdit *hourBox;
+	TSpinEdit *minuteBox;
 	TRadioGroup *RadioGroup2;
-	TRadioButton *RadioButton3;
-	TRadioButton *RadioButton4;
+	TRadioButton *amRadio;
+	TRadioButton *pmRadio;
 	TLabel *hourLabel;
 	TLabel *minuteLabel;
 	TButton *scheduleButton;
 	TListBox *ListBox1;
-	TEdit *nameTextbox;
+	TEdit *nameBox;
 	TButton *buttonPreview;
+	TLabel *nameLabel;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall wallpaperButtonClick(TObject *Sender);
 	void __fastcall buttonPreviewClick(TObject *Sender);
+	void __fastcall scheduleButtonClick(TObject *Sender);
                    private :            // User declarations
                               public :  // User declarations
                                         __fastcall TForm2(TComponent* Owner);

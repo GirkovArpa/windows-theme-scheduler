@@ -36,6 +36,13 @@ object Form2: TForm2
     Height = 13
     Caption = 'Minute:'
   end
+  object nameLabel: TLabel
+    Left = 8
+    Top = 275
+    Width = 31
+    Height = 13
+    Caption = 'Name:'
+  end
   object Button1: TButton
     Left = 8
     Top = 8
@@ -89,7 +96,7 @@ object Form2: TForm2
     TabOrder = 5
     OnClick = wallpaperButtonClick
   end
-  object SpinEdit1: TSpinEdit
+  object hourBox: TSpinEdit
     Left = 41
     Top = 198
     Width = 34
@@ -99,7 +106,7 @@ object Form2: TForm2
     TabOrder = 6
     Value = 1
   end
-  object SpinEdit2: TSpinEdit
+  object minuteBox: TSpinEdit
     Left = 126
     Top = 198
     Width = 35
@@ -117,7 +124,7 @@ object Form2: TForm2
     Caption = 'Period'
     TabOrder = 8
   end
-  object RadioButton3: TRadioButton
+  object amRadio: TRadioButton
     Left = 24
     Top = 244
     Width = 33
@@ -125,7 +132,7 @@ object Form2: TForm2
     Caption = 'AM'
     TabOrder = 9
   end
-  object RadioButton4: TRadioButton
+  object pmRadio: TRadioButton
     Left = 120
     Top = 244
     Width = 34
@@ -140,6 +147,7 @@ object Form2: TForm2
     Height = 25
     Caption = 'Schedule'
     TabOrder = 11
+    OnClick = scheduleButtonClick
   end
   object ListBox1: TListBox
     Left = 167
@@ -149,10 +157,10 @@ object Form2: TForm2
     ItemHeight = 13
     TabOrder = 12
   end
-  object nameTextbox: TEdit
-    Left = 8
+  object nameBox: TEdit
+    Left = 45
     Top = 272
-    Width = 153
+    Width = 116
     Height = 21
     TabOrder = 13
   end

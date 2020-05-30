@@ -9,10 +9,25 @@
 
 #include "changeWallpaper.h"
 #include "changeColor.h"
+
+#include <vector>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 TForm2* Form2;
+
+struct Theme {
+    COLORREF color;
+    String filename;
+    bool lightMode;
+    int hour;
+    int minute;
+    bool AM;
+    String name;
+};
+
+std::vector<Theme> themes;
+
 //---------------------------------------------------------------------------
 __fastcall TForm2::TForm2(TComponent* Owner) : TForm(Owner) {
     //ColorDialog1->Execute();
@@ -30,10 +45,22 @@ void __fastcall TForm2::wallpaperButtonClick(TObject* Sender) {
     Image1->Picture->LoadFromFile(OpenPictureDialog1->FileName);
 }
 //---------------------------------------------------------------------------
-void __fastcall TForm2::buttonPreviewClick(TObject *Sender)
-{
+void __fastcall TForm2::buttonPreviewClick(TObject* Sender) {
     changeWallpaper(OpenPictureDialog1->FileName.c_str(), lightRadio->Checked);
     changeColor(colorPanel->Color);
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm2::scheduleButtonClick(TObject* Sender) {
+    COLORREF color = colorPanel->Color;
+    String filename = OpenPictureDialog1->FileName;
+    bool lightMode = lightRadio->Checked;
+    int hour = hourBox->Value;
+    int minute = minuteBox->Value;
+    String name = nameBox->Text;
+    bool AM = amRadio->Checked;
+
+    String summary = UIntToStr((unsigned)color) + "\n" + filename + "\n" + IntToStr(lightMode) + "\n" + IntToStr(minute) + "\n" + name + "\n" + IntToStr(AM);
+    ShowMessage(summary);
+}
+//---------------------------------------------------------------------------
