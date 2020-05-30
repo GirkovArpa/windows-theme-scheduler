@@ -58,6 +58,7 @@ void __fastcall TForm2::ListBox1Click(TObject* Sender) {
             Theme theme = themes.at(i);
             colorPanel->Color = (TColor)theme.color;
             Image1->Picture->LoadFromFile(theme.filename);
+            OpenPictureDialog1->FileName = theme.filename;
             if (theme.lightMode) {
                 lightRadio->Checked = true;
             } else {

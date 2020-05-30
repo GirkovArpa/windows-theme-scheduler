@@ -32,7 +32,11 @@ class TForm2 : public TForm {
 	TButton *buttonPreview;
 	TLabel *nameLabel;
 	TGroupBox *modeGroup;
-	TRadioButton *RadioButton1;
+	TRadioButton *lightRadio;
+	TRadioButton *darkRadio;
+	TGroupBox *groupPeriod;
+	TRadioButton *amRadio;
+	TRadioButton *pmRadio;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall wallpaperButtonClick(TObject *Sender);
 	void __fastcall buttonPreviewClick(TObject *Sender);
