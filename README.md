@@ -1,6 +1,4 @@
-# Windows 10 Theme Scheduler
-
-![Logo from Imgur](https://i.imgur.com/Imbn82t.png)
+![Logo from Imgur](https://i.imgur.com/EvxT4q5.png)
 
 ## Schedule your theme to change color and wallpaper at specified times of the day or night.
 
