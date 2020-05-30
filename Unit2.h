@@ -48,6 +48,7 @@ class TForm2 : public TForm {
 	TMenuItem *About1;
 	TMenuItem *About2;
 	TMenuItem *About3;
+	TButton *editButton;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall wallpaperButtonClick(TObject *Sender);
 	void __fastcall buttonPreviewClick(TObject *Sender);
@@ -56,6 +57,7 @@ class TForm2 : public TForm {
 	void __fastcall deleteButtonClick(TObject *Sender);
 	void __fastcall ApplicationEvents1Minimize(TObject *Sender);
 	void __fastcall TrayIcon1DblClick(TObject *Sender);
+	void __fastcall editButtonClick(TObject *Sender);
                    private :            // User declarations
                               public :  // User declarations
                                         __fastcall TForm2(TComponent* Owner);

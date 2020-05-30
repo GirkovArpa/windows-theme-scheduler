@@ -131,3 +131,28 @@ void __fastcall TForm2::TrayIcon1DblClick(TObject* Sender) {
     Application->BringToFront();
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm2::editButtonClick(TObject* Sender) {
+    if (ListBox1->GetCount() > 0 && ListBox1->ItemIndex != -1) {
+    if (!FileExists(OpenPictureDialog1->FileName)) {
+        MessageDlg("No wallpaper image was selected.", mtError, TMsgDlgButtons() << mbOK, 0);
+        return;
+    }
+
+    struct Theme theme = {
+        (COLORREF)colorPanel->Color,
+        OpenPictureDialog1->FileName,
+        lightRadio->Checked,
+        hourBox->Value,
+        minuteBox->Value,
+        amRadio->Checked,
+        nameBox->Text};
+
+    if (theme.name == "") {
+        theme.name = "theme " + IntToStr(++themeCount);
+    }
+
+    themes.at(ListBox1->ItemIndex) = theme;
+    ListBox1->Items->Strings[ListBox1->ItemIndex] = theme.name;
+    }
+}
+//---------------------------------------------------------------------------

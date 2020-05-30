@@ -88,7 +88,7 @@ object Form2: TForm2
   object scheduleButton: TButton
     Left = 8
     Top = 299
-    Width = 153
+    Width = 81
     Height = 25
     Caption = 'Schedule'
     TabOrder = 5
@@ -195,6 +195,15 @@ object Form2: TForm2
       Proportional = True
       Stretch = True
     end
+  end
+  object editButton: TButton
+    Left = 95
+    Top = 299
+    Width = 66
+    Height = 25
+    Caption = 'Save Edit'
+    TabOrder = 13
+    OnClick = editButtonClick
   end
   object ColorDialog1: TColorDialog
     Left = 408
