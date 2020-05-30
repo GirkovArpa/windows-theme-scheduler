@@ -89,6 +89,7 @@ void __fastcall TForm2::scheduleButtonClick(TObject* Sender) {
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm2::deleteButtonClick(TObject* Sender) {
+    themes.erase(themes.begin() + ListBox1->ItemIndex);
     ListBox1->DeleteSelected();
 }
 //---------------------------------------------------------------------------
