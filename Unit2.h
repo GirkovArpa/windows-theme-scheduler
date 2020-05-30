@@ -43,14 +43,14 @@ class TForm2 : public TForm {
 	TButton *deleteButton;
 	TTrayIcon *TrayIcon1;
 	TApplicationEvents *ApplicationEvents1;
-	TGroupBox *GroupBox1;
-	TImage *Image1;
 	TMainMenu *MainMenu1;
 	TMenuItem *N1;
 	TMenuItem *About1;
 	TMenuItem *About3;
 	TButton *editButton;
 	TImageList *ImageList1;
+	TBevel *Bevel1;
+	TImage *Image1;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall wallpaperButtonClick(TObject *Sender);
 	void __fastcall buttonPreviewClick(TObject *Sender);

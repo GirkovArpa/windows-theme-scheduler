@@ -38,6 +38,21 @@ object Form2: TForm2
     Height = 13
     Caption = 'Name:'
   end
+  object Bevel1: TBevel
+    Left = 8
+    Top = 119
+    Width = 153
+    Height = 73
+  end
+  object Image1: TImage
+    Left = 8
+    Top = 119
+    Width = 153
+    Height = 73
+    Center = True
+    Proportional = True
+    Stretch = True
+  end
   object Button1: TButton
     Left = 8
     Top = 8
@@ -180,29 +195,13 @@ object Form2: TForm2
     TabOrder = 11
     OnClick = deleteButtonClick
   end
-  object GroupBox1: TGroupBox
-    Left = 8
-    Top = 119
-    Width = 153
-    Height = 73
-    TabOrder = 12
-    object Image1: TImage
-      Left = 0
-      Top = 0
-      Width = 153
-      Height = 73
-      Center = True
-      Proportional = True
-      Stretch = True
-    end
-  end
   object editButton: TButton
     Left = 95
     Top = 299
     Width = 66
     Height = 25
     Caption = 'Save Edit'
-    TabOrder = 13
+    TabOrder = 12
     OnClick = editButtonClick
   end
   object ColorDialog1: TColorDialog
