@@ -3,7 +3,7 @@ object AboutBox: TAboutBox
   Top = 108
   BorderStyle = bsDialog
   Caption = 'About'
-  ClientHeight = 134
+  ClientHeight = 175
   ClientWidth = 298
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -173,5 +173,24 @@ object AboutBox: TAboutBox
     ModalResult = 1
     TabOrder = 1
     OnClick = OKButtonClick
+  end
+  object Panel2: TPanel
+    Left = 9
+    Top = 134
+    Width = 281
+    Height = 35
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    ParentColor = True
+    TabOrder = 2
+    object labelAttribution: TLinkLabel
+      Left = 87
+      Top = 8
+      Width = 120
+      Height = 17
+      Caption = 'Menu icons by <a href="http://www.aha-soft.com/">Aha-Soft</a>.'
+      TabOrder = 0
+      OnLinkClick = labelAttributionLinkClick
+    end
   end
 end

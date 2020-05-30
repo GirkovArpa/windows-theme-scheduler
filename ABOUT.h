@@ -24,8 +24,12 @@ __published:
 	TLabel *labelCopyright;
 	TButton *OKButton;
 	TLinkLabel *labelReddit;
+	TPanel *Panel2;
+	TLinkLabel *labelAttribution;
 	void __fastcall OKButtonClick(TObject *Sender);
 	void __fastcall labelRedditLinkClick(TObject *Sender, const UnicodeString Link,
+          TSysLinkType LinkType);
+	void __fastcall labelAttributionLinkClick(TObject *Sender, const UnicodeString Link,
           TSysLinkType LinkType);
 private:
 public:
