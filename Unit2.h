@@ -15,6 +15,8 @@
 #include <Vcl.Samples.Spin.hpp>
 #include <Vcl.AppEvnts.hpp>
 #include <Vcl.Menus.hpp>
+#include <System.ImageList.hpp>
+#include <Vcl.ImgList.hpp>
 //---------------------------------------------------------------------------
 class TForm2 : public TForm {
     __published :                       // IDE-managed Components
@@ -48,6 +50,7 @@ class TForm2 : public TForm {
 	TMenuItem *About1;
 	TMenuItem *About3;
 	TButton *editButton;
+	TImageList *ImageList1;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall wallpaperButtonClick(TObject *Sender);
 	void __fastcall buttonPreviewClick(TObject *Sender);

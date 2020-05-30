@@ -48,6 +48,8 @@ __fastcall TForm2::TForm2(TComponent* Owner) : TForm(Owner) {
     TMyClass* myThread = new TMyClass(false);
     AboutBox = new TAboutBox(this);
     OKRightDlg = new TOKRightDlg(this);
+
+    MainMenu1->Images = ImageList1;
 }
 //---------------------------------------------------------------------------
 
