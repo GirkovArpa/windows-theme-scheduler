@@ -20,8 +20,8 @@ class TForm2 : public TForm {
 	TButton *Button1;
 	TPanel *colorPanel;
 	TRadioGroup *RadioGroup1;
-	TRadioButton *RadioButton1;
-	TRadioButton *RadioButton2;
+	TRadioButton *lightRadio;
+	TRadioButton *darkRadio;
 	TButton *wallpaperButton;
 	TImage *Image1;
 	TOpenPictureDialog *OpenPictureDialog1;

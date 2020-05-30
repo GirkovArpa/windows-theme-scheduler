@@ -6,6 +6,9 @@
 #include "Unit2.h"
 #include <Jpeg.hpp>
 #include <pngimage.hpp>
+
+#include "changeWallpaper.h"
+#include "changeColor.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -29,7 +32,8 @@ void __fastcall TForm2::wallpaperButtonClick(TObject* Sender) {
 //---------------------------------------------------------------------------
 void __fastcall TForm2::buttonPreviewClick(TObject *Sender)
 {
-//
+    changeWallpaper(OpenPictureDialog1->FileName.c_str(), lightRadio->Checked);
+    changeColor(colorPanel->Color);
 }
 //---------------------------------------------------------------------------
 

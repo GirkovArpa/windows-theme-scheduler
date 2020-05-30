@@ -62,7 +62,7 @@ object Form2: TForm2
     Caption = 'Mode'
     TabOrder = 2
   end
-  object RadioButton1: TRadioButton
+  object lightRadio: TRadioButton
     Left = 24
     Top = 56
     Width = 41
@@ -72,7 +72,7 @@ object Form2: TForm2
     TabOrder = 3
     TabStop = True
   end
-  object RadioButton2: TRadioButton
+  object darkRadio: TRadioButton
     Left = 103
     Top = 56
     Width = 41
@@ -92,7 +92,7 @@ object Form2: TForm2
   object SpinEdit1: TSpinEdit
     Left = 41
     Top = 198
-    Width = 38
+    Width = 34
     Height = 22
     MaxValue = 12
     MinValue = 1
