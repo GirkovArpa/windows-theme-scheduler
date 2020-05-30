@@ -5,6 +5,8 @@
 
 #include "Unit1.h"
 #include "Unit2.h"
+#include "ABOUT.h"
+
 #include <Jpeg.hpp>
 #include <pngimage.hpp>
 
@@ -43,6 +45,7 @@ void checkSchedule(int hour, int minute, bool am) {
 //---------------------------------------------------------------------------
 __fastcall TForm2::TForm2(TComponent* Owner) : TForm(Owner) {
     TMyClass* myThread = new TMyClass(false);
+    AboutBox = new TAboutBox(this);
 }
 //---------------------------------------------------------------------------
 
@@ -156,3 +159,10 @@ void __fastcall TForm2::editButtonClick(TObject* Sender) {
     }
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm2::About3Click(TObject *Sender)
+{
+    AboutBox->Parent = this;
+    AboutBox->ShowModal();
+}
+//---------------------------------------------------------------------------
+

@@ -58,6 +58,7 @@ class TForm2 : public TForm {
 	void __fastcall ApplicationEvents1Minimize(TObject *Sender);
 	void __fastcall TrayIcon1DblClick(TObject *Sender);
 	void __fastcall editButtonClick(TObject *Sender);
+	void __fastcall About3Click(TObject *Sender);
                    private :            // User declarations
                               public :  // User declarations
                                         __fastcall TForm2(TComponent* Owner);

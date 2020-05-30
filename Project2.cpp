@@ -5,6 +5,7 @@
 #include <tchar.h>
 //---------------------------------------------------------------------------
 USEFORM("Unit2.cpp", Form2);
+USEFORM("ABOUT.cpp", AboutBox);
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int) {
     try {
@@ -12,7 +13,8 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int) {
         Application->MainFormOnTaskBar = true;
         Application->Title = "Windows Theme Scheduler";
 		Application->CreateForm(__classid(TForm2), &Form2);
-        Application->Run();
+		Application->CreateForm(__classid(TAboutBox), &AboutBox);
+		Application->Run();
     } catch (Exception &exception) {
         Application->ShowException(&exception);
     } catch (...) {

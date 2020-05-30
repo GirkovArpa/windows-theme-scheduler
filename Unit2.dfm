@@ -5,7 +5,7 @@ object Form2: TForm2
   BorderStyle = bsSingle
   Caption = 'Windows Theme Scheduler'
   ClientHeight = 361
-  ClientWidth = 328
+  ClientWidth = 493
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -9705,6 +9705,7 @@ object Form2: TForm2
       end
       object About3: TMenuItem
         Caption = 'About'
+        OnClick = About3Click
       end
     end
   end
