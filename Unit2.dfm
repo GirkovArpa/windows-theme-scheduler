@@ -12,6 +12,7 @@ object Form2: TForm2
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  Menu = MainMenu1
   OldCreateOrder = False
   Position = poScreenCenter
   PixelsPerInch = 96
@@ -9679,5 +9680,23 @@ object Form2: TForm2
     OnMinimize = ApplicationEvents1Minimize
     Left = 328
     Top = 104
+  end
+  object MainMenu1: TMainMenu
+    Left = 320
+    Top = 240
+    object N1: TMenuItem
+      Caption = 'Help'
+      Checked = True
+      Default = True
+      object About1: TMenuItem
+        Caption = 'Why is my color not working?'
+      end
+      object About2: TMenuItem
+        Caption = 'Why is my wallpaper not working?'
+      end
+      object About3: TMenuItem
+        Caption = 'About'
+      end
+    end
   end
 end

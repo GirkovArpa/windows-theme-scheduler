@@ -14,6 +14,7 @@
 #include <Vcl.WinXPickers.hpp>
 #include <Vcl.Samples.Spin.hpp>
 #include <Vcl.AppEvnts.hpp>
+#include <Vcl.Menus.hpp>
 //---------------------------------------------------------------------------
 class TForm2 : public TForm {
     __published :                       // IDE-managed Components
@@ -42,6 +43,11 @@ class TForm2 : public TForm {
 	TApplicationEvents *ApplicationEvents1;
 	TGroupBox *GroupBox1;
 	TImage *Image1;
+	TMainMenu *MainMenu1;
+	TMenuItem *N1;
+	TMenuItem *About1;
+	TMenuItem *About2;
+	TMenuItem *About3;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall wallpaperButtonClick(TObject *Sender);
 	void __fastcall buttonPreviewClick(TObject *Sender);
