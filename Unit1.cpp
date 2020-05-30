@@ -38,9 +38,7 @@ void updateTime() {
     Hour = localTime->tm_hour;
     Min = localTime->tm_min;
     Sec = localTime->tm_sec;
-
     AM = (Hour < 12);
-
     if (Hour > 12) {
         Hour -= 12;
     }
@@ -48,7 +46,6 @@ void updateTime() {
 
 __fastcall TMyClass::TMyClass(bool CreateSuspended) : TThread(CreateSuspended) {
     updateTime();
-    //ShowMessage("Hour: " + IntToStr(Hour) + "\nMinute: " + IntToStr(Min) + "\nAM? " + IntToStr(AM));
 }
 //---------------------------------------------------------------------------
 void __fastcall TMyClass::Execute() {
@@ -56,9 +53,7 @@ void __fastcall TMyClass::Execute() {
     //---- Place thread code here ----
     while (true) {
         updateTime();
-        Synchronize([&]() {
-            checkSchedule(Hour, Min, AM);
-        });
+        Queue([&]() { checkSchedule(Hour, Min, AM); });
         Sleep(60'000);
     }
 }

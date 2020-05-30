@@ -21,7 +21,6 @@ class TForm2 : public TForm {
 	TButton *Button1;
 	TPanel *colorPanel;
 	TButton *wallpaperButton;
-	TImage *Image1;
 	TOpenPictureDialog *OpenPictureDialog1;
 	TSpinEdit *hourBox;
 	TSpinEdit *minuteBox;
@@ -41,6 +40,8 @@ class TForm2 : public TForm {
 	TButton *deleteButton;
 	TTrayIcon *TrayIcon1;
 	TApplicationEvents *ApplicationEvents1;
+	TGroupBox *GroupBox1;
+	TImage *Image1;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall wallpaperButtonClick(TObject *Sender);
 	void __fastcall buttonPreviewClick(TObject *Sender);

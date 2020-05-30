@@ -6,7 +6,7 @@
         <AppType>Application</AppType>
         <MainSource>Project2.cpp</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>1</TargetedPlatforms>
     </PropertyGroup>
@@ -118,6 +118,7 @@
         <LinkPackageImports>rtl.bpi;vcl.bpi;vclactnband.bpi;vclx.bpi;vclwinx.bpi;vclimg.bpi;VclSmp.bpi</LinkPackageImports>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <Icon_MainIcon>Windows Theme Scheduler.ico</Icon_MainIcon>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <Defines>NDEBUG;$(Defines)</Defines>
@@ -128,7 +129,20 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <BCC_PCHName_Clang>Project2PCH1.h</BCC_PCHName_Clang>
-        <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
+        <UsePackages>false</UsePackages>
+        <BCC_EnableRTTI>false</BCC_EnableRTTI>
+        <BCC_EnableExceptionHandling>false</BCC_EnableExceptionHandling>
+        <BCC_ExtendedErrorInfo>false</BCC_ExtendedErrorInfo>
+        <BCC_OptimizeForSize>true</BCC_OptimizeForSize>
+        <BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+        <DynamicRTL>false</DynamicRTL>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_MajorVer>0</VerInfo_MajorVer>
+        <VerInfo_Build>1</VerInfo_Build>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=GirkovArpa;FileDescription=Schedule the Windows 10 theme and wallpaper to change automatically at specified intervals.;FileVersion=0.0.0.1;InternalName=WindowsThemeScheduler.exe;LegalCopyright=Copyright © 2020 Girkov Arpa;LegalTrademarks=;OriginalFilename=WindowsThemeScheduler.exe;ProgramID=WindowsThemeScheduler;ProductName=Windows Theme Scheduler;ProductVersion=0.0.0.1;Comments=Inspired by the Reddit thread https://old.reddit.com/r/software/comments/gsqhtr/looking_for_a_program_that_changes_system_theme/</VerInfo_Keys>
+        <LinkPackageStatics>rtl.lib;vcl.lib;vclactnband.lib;vclx.lib;vclwinx.lib;vclimg.lib;VclSmp.lib</LinkPackageStatics>
+        <Icon_MainIcon>Windows Theme Scheduler.ico</Icon_MainIcon>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <BCC_PCHName_Clang>Project2PCH1.h</BCC_PCHName_Clang>

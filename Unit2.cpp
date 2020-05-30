@@ -58,6 +58,11 @@ void __fastcall TForm2::wallpaperButtonClick(TObject* Sender) {
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm2::buttonPreviewClick(TObject* Sender) {
+    if (!FileExists(OpenPictureDialog1->FileName)) {
+        MessageDlg("No wallpaper image was selected.", mtError, TMsgDlgButtons() << mbOK, 0);
+        return;
+    }
+
     changeWallpaper(OpenPictureDialog1->FileName.c_str(), lightRadio->Checked);
     changeColor(colorPanel->Color);
 }
@@ -92,8 +97,6 @@ void __fastcall TForm2::scheduleButtonClick(TObject* Sender) {
         return;
     }
 
-    themeCount++;
-
     struct Theme theme = {
         (COLORREF)colorPanel->Color,
         OpenPictureDialog1->FileName,
@@ -104,7 +107,7 @@ void __fastcall TForm2::scheduleButtonClick(TObject* Sender) {
         nameBox->Text};
 
     if (theme.name == "") {
-        theme.name = "theme " + IntToStr(themeCount);
+        theme.name = "theme " + IntToStr(++themeCount);
     }
 
     themes.push_back(theme);
