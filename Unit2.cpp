@@ -89,7 +89,26 @@ void __fastcall TForm2::scheduleButtonClick(TObject* Sender) {
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm2::deleteButtonClick(TObject* Sender) {
-    themes.erase(themes.begin() + ListBox1->ItemIndex);
-    ListBox1->DeleteSelected();
+    if (ListBox1->GetCount() > 0) {
+        themes.erase(themes.begin() + ListBox1->ItemIndex);
+        ListBox1->DeleteSelected();
+    }
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm2::ApplicationEvents1Minimize(TObject *Sender)
+{
+    Hide();
+    WindowState = wsMinimized;
+}
+
+void __fastcall TForm2::TrayIcon1Click(TObject* Sender) {
+
+}
+
+    void __fastcall TForm2::TrayIcon1DblClick(TObject* Sender) {
+    Show();
+    WindowState = wsNormal;
+    Application->BringToFront();
+}
+//---------------------------------------------------------------------------
+
