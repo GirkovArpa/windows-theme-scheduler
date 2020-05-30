@@ -69,7 +69,7 @@ object Form2: TForm2
     Height = 25
     Color = clWhite
     ParentBackground = False
-    TabOrder = 1
+    TabOrder = 3
   end
   object wallpaperButton: TButton
     Left = 8
@@ -87,7 +87,7 @@ object Form2: TForm2
     Height = 22
     MaxValue = 12
     MinValue = 1
-    TabOrder = 3
+    TabOrder = 4
     Value = 1
   end
   object minuteBox: TSpinEdit
@@ -97,7 +97,7 @@ object Form2: TForm2
     Height = 22
     MaxValue = 59
     MinValue = 0
-    TabOrder = 4
+    TabOrder = 5
     Value = 0
   end
   object scheduleButton: TButton
@@ -106,7 +106,7 @@ object Form2: TForm2
     Width = 81
     Height = 25
     Caption = 'Schedule'
-    TabOrder = 5
+    TabOrder = 8
     OnClick = scheduleButtonClick
   end
   object ListBox1: TListBox
@@ -115,7 +115,7 @@ object Form2: TForm2
     Width = 154
     Height = 316
     ItemHeight = 13
-    TabOrder = 6
+    TabOrder = 11
     OnClick = ListBox1Click
   end
   object nameBox: TEdit
@@ -131,7 +131,7 @@ object Form2: TForm2
     Width = 153
     Height = 25
     Caption = 'Use Now'
-    TabOrder = 9
+    TabOrder = 10
     OnClick = buttonPreviewClick
   end
   object modeGroup: TGroupBox
@@ -140,7 +140,7 @@ object Form2: TForm2
     Width = 153
     Height = 43
     Caption = 'Mode'
-    TabOrder = 8
+    TabOrder = 1
     object lightRadio: TRadioButton
       Left = 10
       Top = 16
@@ -166,7 +166,7 @@ object Form2: TForm2
     Width = 153
     Height = 40
     Caption = 'Period'
-    TabOrder = 10
+    TabOrder = 6
     object amRadio: TRadioButton
       Left = 16
       Top = 16
@@ -192,7 +192,7 @@ object Form2: TForm2
     Width = 154
     Height = 25
     Caption = 'Delete'
-    TabOrder = 11
+    TabOrder = 12
     OnClick = deleteButtonClick
   end
   object editButton: TButton
@@ -201,7 +201,7 @@ object Form2: TForm2
     Width = 66
     Height = 25
     Caption = 'Save Edit'
-    TabOrder = 12
+    TabOrder = 9
     OnClick = editButtonClick
   end
   object ColorDialog1: TColorDialog
