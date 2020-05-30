@@ -19,17 +19,11 @@ class TForm2 : public TForm {
 	TColorDialog *ColorDialog1;
 	TButton *Button1;
 	TPanel *colorPanel;
-	TRadioGroup *RadioGroup1;
-	TRadioButton *lightRadio;
-	TRadioButton *darkRadio;
 	TButton *wallpaperButton;
 	TImage *Image1;
 	TOpenPictureDialog *OpenPictureDialog1;
 	TSpinEdit *hourBox;
 	TSpinEdit *minuteBox;
-	TRadioGroup *RadioGroup2;
-	TRadioButton *amRadio;
-	TRadioButton *pmRadio;
 	TLabel *hourLabel;
 	TLabel *minuteLabel;
 	TButton *scheduleButton;
@@ -37,10 +31,13 @@ class TForm2 : public TForm {
 	TEdit *nameBox;
 	TButton *buttonPreview;
 	TLabel *nameLabel;
+	TGroupBox *modeGroup;
+	TRadioButton *RadioButton1;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall wallpaperButtonClick(TObject *Sender);
 	void __fastcall buttonPreviewClick(TObject *Sender);
 	void __fastcall scheduleButtonClick(TObject *Sender);
+	void __fastcall ListBox1Click(TObject *Sender);
                    private :            // User declarations
                               public :  // User declarations
                                         __fastcall TForm2(TComponent* Owner);

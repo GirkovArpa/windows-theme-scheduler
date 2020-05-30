@@ -51,16 +51,44 @@ void __fastcall TForm2::buttonPreviewClick(TObject* Sender) {
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm2::scheduleButtonClick(TObject* Sender) {
-    COLORREF color = colorPanel->Color;
-    String filename = OpenPictureDialog1->FileName;
-    bool lightMode = lightRadio->Checked;
-    int hour = hourBox->Value;
-    int minute = minuteBox->Value;
-    String name = nameBox->Text;
-    bool AM = amRadio->Checked;
+void __fastcall TForm2::ListBox1Click(TObject* Sender) {
+    for (int i = 0; i < ListBox1->Items->Count; i++) {
+        if (ListBox1->Selected[i]) {
+            //ShowMessage(ListBox1->Items->Strings[i]);
+            Theme theme = themes.at(i);
+            colorPanel->Color = (TColor)theme.color;
+            Image1->Picture->LoadFromFile(theme.filename);
+            if (theme.lightMode) {
+                lightRadio->Checked = true;
+            } else {
+                darkRadio->Checked = true;
+            }
+            hourBox->Value = theme.hour;
+            minuteBox->Value = theme.minute;
+            if (theme.AM) {
+                amRadio->Checked = true;
+            } else {
+                pmRadio->Checked = true;
+            }
+            nameBox->Text = theme.name;
+        }
+    }
+}
 
-    String summary = UIntToStr((unsigned)color) + "\n" + filename + "\n" + IntToStr(lightMode) + "\n" + IntToStr(minute) + "\n" + name + "\n" + IntToStr(AM);
-    ShowMessage(summary);
+void __fastcall TForm2::scheduleButtonClick(TObject* Sender) {
+    struct Theme theme = {
+        (COLORREF)colorPanel->Color,
+        OpenPictureDialog1->FileName,
+        lightRadio->Checked,
+        hourBox->Value,
+        minuteBox->Value,
+        amRadio->Checked,
+        nameBox->Text};
+
+    themes.push_back(theme);
+    ListBox1->Items->Add(theme.name);
+
+    //String summary = UIntToStr((unsigned)color) + "\n" + filename + "\n" + IntToStr(lightMode) + "\n" + IntToStr(minute) + "\n" + name + "\n" + IntToStr(AM);
+    //ShowMessage(summary);
 }
 //---------------------------------------------------------------------------

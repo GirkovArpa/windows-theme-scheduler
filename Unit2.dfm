@@ -61,39 +61,13 @@ object Form2: TForm2
     ParentBackground = False
     TabOrder = 1
   end
-  object RadioGroup1: TRadioGroup
-    Left = 8
-    Top = 39
-    Width = 153
-    Height = 43
-    Caption = 'Mode'
-    TabOrder = 2
-  end
-  object lightRadio: TRadioButton
-    Left = 24
-    Top = 56
-    Width = 41
-    Height = 17
-    Caption = 'Light'
-    Checked = True
-    TabOrder = 3
-    TabStop = True
-  end
-  object darkRadio: TRadioButton
-    Left = 103
-    Top = 56
-    Width = 41
-    Height = 17
-    Caption = 'Dark'
-    TabOrder = 4
-  end
   object wallpaperButton: TButton
     Left = 8
     Top = 88
     Width = 153
     Height = 25
     Caption = 'Pick Wallpaper'
-    TabOrder = 5
+    TabOrder = 3
     OnClick = wallpaperButtonClick
   end
   object hourBox: TSpinEdit
@@ -103,7 +77,7 @@ object Form2: TForm2
     Height = 22
     MaxValue = 12
     MinValue = 1
-    TabOrder = 6
+    TabOrder = 4
     Value = 1
   end
   object minuteBox: TSpinEdit
@@ -113,32 +87,8 @@ object Form2: TForm2
     Height = 22
     MaxValue = 59
     MinValue = 0
-    TabOrder = 7
+    TabOrder = 5
     Value = 0
-  end
-  object RadioGroup2: TRadioGroup
-    Left = 8
-    Top = 226
-    Width = 153
-    Height = 43
-    Caption = 'Period'
-    TabOrder = 8
-  end
-  object amRadio: TRadioButton
-    Left = 24
-    Top = 244
-    Width = 33
-    Height = 17
-    Caption = 'AM'
-    TabOrder = 9
-  end
-  object pmRadio: TRadioButton
-    Left = 120
-    Top = 244
-    Width = 34
-    Height = 17
-    Caption = 'PM'
-    TabOrder = 10
   end
   object scheduleButton: TButton
     Left = 8
@@ -146,7 +96,7 @@ object Form2: TForm2
     Width = 153
     Height = 25
     Caption = 'Schedule'
-    TabOrder = 11
+    TabOrder = 6
     OnClick = scheduleButtonClick
   end
   object ListBox1: TListBox
@@ -155,14 +105,15 @@ object Form2: TForm2
     Width = 154
     Height = 316
     ItemHeight = 13
-    TabOrder = 12
+    TabOrder = 7
+    OnClick = ListBox1Click
   end
   object nameBox: TEdit
     Left = 45
     Top = 272
     Width = 116
     Height = 21
-    TabOrder = 13
+    TabOrder = 8
   end
   object buttonPreview: TButton
     Left = 8
@@ -170,8 +121,24 @@ object Form2: TForm2
     Width = 153
     Height = 25
     Caption = 'Preview'
-    TabOrder = 14
+    TabOrder = 9
     OnClick = buttonPreviewClick
+  end
+  object modeGroup: TGroupBox
+    Left = 8
+    Top = 39
+    Width = 153
+    Height = 43
+    Caption = 'Mode'
+    TabOrder = 10
+    object RadioButton1: TRadioButton
+      Left = 16
+      Top = 24
+      Width = 113
+      Height = 17
+      Caption = 'RadioButton1'
+      TabOrder = 0
+    end
   end
   object ColorDialog1: TColorDialog
     Left = 408
