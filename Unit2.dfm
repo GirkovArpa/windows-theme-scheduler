@@ -9698,10 +9698,8 @@ object Form2: TForm2
       Checked = True
       Default = True
       object About1: TMenuItem
-        Caption = 'Why is my color not working?'
-      end
-      object About2: TMenuItem
-        Caption = 'Why is my wallpaper not working?'
+        Caption = 'Why doesn'#39't my color work?'
+        OnClick = About1Click
       end
       object About3: TMenuItem
         Caption = 'About'

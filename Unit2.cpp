@@ -6,6 +6,7 @@
 #include "Unit1.h"
 #include "Unit2.h"
 #include "ABOUT.h"
+#include "OKCANCL2.h"
 
 #include <Jpeg.hpp>
 #include <pngimage.hpp>
@@ -46,6 +47,7 @@ void checkSchedule(int hour, int minute, bool am) {
 __fastcall TForm2::TForm2(TComponent* Owner) : TForm(Owner) {
     TMyClass* myThread = new TMyClass(false);
     AboutBox = new TAboutBox(this);
+    OKRightDlg = new TOKRightDlg(this);
 }
 //---------------------------------------------------------------------------
 
@@ -136,33 +138,37 @@ void __fastcall TForm2::TrayIcon1DblClick(TObject* Sender) {
 //---------------------------------------------------------------------------
 void __fastcall TForm2::editButtonClick(TObject* Sender) {
     if (ListBox1->GetCount() > 0 && ListBox1->ItemIndex != -1) {
-    if (!FileExists(OpenPictureDialog1->FileName)) {
-        MessageDlg("No wallpaper image was selected.", mtError, TMsgDlgButtons() << mbOK, 0);
-        return;
-    }
+        if (!FileExists(OpenPictureDialog1->FileName)) {
+            MessageDlg("No wallpaper image was selected.", mtError, TMsgDlgButtons() << mbOK, 0);
+            return;
+        }
 
-    struct Theme theme = {
-        (COLORREF)colorPanel->Color,
-        OpenPictureDialog1->FileName,
-        lightRadio->Checked,
-        hourBox->Value,
-        minuteBox->Value,
-        amRadio->Checked,
-        nameBox->Text};
+        struct Theme theme = {
+            (COLORREF)colorPanel->Color,
+            OpenPictureDialog1->FileName,
+            lightRadio->Checked,
+            hourBox->Value,
+            minuteBox->Value,
+            amRadio->Checked,
+            nameBox->Text};
 
-    if (theme.name == "") {
-        theme.name = "theme " + IntToStr(++themeCount);
-    }
+        if (theme.name == "") {
+            theme.name = "theme " + IntToStr(++themeCount);
+        }
 
-    themes.at(ListBox1->ItemIndex) = theme;
-    ListBox1->Items->Strings[ListBox1->ItemIndex] = theme.name;
+        themes.at(ListBox1->ItemIndex) = theme;
+        ListBox1->Items->Strings[ListBox1->ItemIndex] = theme.name;
     }
 }
 //---------------------------------------------------------------------------
-void __fastcall TForm2::About3Click(TObject *Sender)
-{
-    AboutBox->Parent = this;
+void __fastcall TForm2::About3Click(TObject* Sender) {
     AboutBox->ShowModal();
+    AboutBox->Parent = this;
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm2::About1Click(TObject* Sender) {
+    OKRightDlg->ShowModal();
+    OKRightDlg->Parent = this;
+}
+//---------------------------------------------------------------------------

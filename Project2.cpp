@@ -6,6 +6,7 @@
 //---------------------------------------------------------------------------
 USEFORM("Unit2.cpp", Form2);
 USEFORM("ABOUT.cpp", AboutBox);
+USEFORM("OKCANCL2.cpp", OKRightDlg);
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int) {
     try {
@@ -14,6 +15,7 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int) {
         Application->Title = "Windows Theme Scheduler";
 		Application->CreateForm(__classid(TForm2), &Form2);
 		Application->CreateForm(__classid(TAboutBox), &AboutBox);
+		Application->CreateForm(__classid(TOKRightDlg), &OKRightDlg);
 		Application->Run();
     } catch (Exception &exception) {
         Application->ShowException(&exception);
