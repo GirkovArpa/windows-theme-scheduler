@@ -52,28 +52,23 @@ void __fastcall TForm2::buttonPreviewClick(TObject* Sender) {
 //---------------------------------------------------------------------------
 
 void __fastcall TForm2::ListBox1Click(TObject* Sender) {
-    for (int i = 0; i < ListBox1->Items->Count; i++) {
-        if (ListBox1->Selected[i]) {
-            //ShowMessage(ListBox1->Items->Strings[i]);
-            Theme theme = themes.at(i);
-            colorPanel->Color = (TColor)theme.color;
-            Image1->Picture->LoadFromFile(theme.filename);
-            OpenPictureDialog1->FileName = theme.filename;
-            if (theme.lightMode) {
-                lightRadio->Checked = true;
-            } else {
-                darkRadio->Checked = true;
-            }
-            hourBox->Value = theme.hour;
-            minuteBox->Value = theme.minute;
-            if (theme.AM) {
-                amRadio->Checked = true;
-            } else {
-                pmRadio->Checked = true;
-            }
-            nameBox->Text = theme.name;
-        }
+    Theme theme = themes.at(ListBox1->ItemIndex);
+    colorPanel->Color = (TColor)theme.color;
+    Image1->Picture->LoadFromFile(theme.filename);
+    OpenPictureDialog1->FileName = theme.filename;
+    if (theme.lightMode) {
+        lightRadio->Checked = true;
+    } else {
+        darkRadio->Checked = true;
     }
+    hourBox->Value = theme.hour;
+    minuteBox->Value = theme.minute;
+    if (theme.AM) {
+        amRadio->Checked = true;
+    } else {
+        pmRadio->Checked = true;
+    }
+    nameBox->Text = theme.name;
 }
 
 void __fastcall TForm2::scheduleButtonClick(TObject* Sender) {
@@ -91,5 +86,9 @@ void __fastcall TForm2::scheduleButtonClick(TObject* Sender) {
 
     //String summary = UIntToStr((unsigned)color) + "\n" + filename + "\n" + IntToStr(lightMode) + "\n" + IntToStr(minute) + "\n" + name + "\n" + IntToStr(AM);
     //ShowMessage(summary);
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm2::deleteButtonClick(TObject* Sender) {
+    ListBox1->DeleteSelected();
 }
 //---------------------------------------------------------------------------

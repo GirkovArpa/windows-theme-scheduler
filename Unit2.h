@@ -37,11 +37,13 @@ class TForm2 : public TForm {
 	TGroupBox *groupPeriod;
 	TRadioButton *amRadio;
 	TRadioButton *pmRadio;
+	TButton *deleteButton;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall wallpaperButtonClick(TObject *Sender);
 	void __fastcall buttonPreviewClick(TObject *Sender);
 	void __fastcall scheduleButtonClick(TObject *Sender);
 	void __fastcall ListBox1Click(TObject *Sender);
+	void __fastcall deleteButtonClick(TObject *Sender);
                    private :            // User declarations
                               public :  // User declarations
                                         __fastcall TForm2(TComponent* Owner);

@@ -3,7 +3,7 @@ object Form2: TForm2
   Top = 0
   Caption = 'Form2'
   ClientHeight = 366
-  ClientWidth = 454
+  ClientWidth = 332
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -171,6 +171,15 @@ object Form2: TForm2
       Caption = 'PM'
       TabOrder = 1
     end
+  end
+  object deleteButton: TButton
+    Left = 167
+    Top = 330
+    Width = 154
+    Height = 25
+    Caption = 'Delete'
+    TabOrder = 11
+    OnClick = deleteButtonClick
   end
   object ColorDialog1: TColorDialog
     Left = 408
