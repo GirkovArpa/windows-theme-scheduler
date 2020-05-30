@@ -5,7 +5,7 @@ object Form2: TForm2
   BorderStyle = bsSingle
   Caption = 'Windows Theme Scheduler'
   ClientHeight = 361
-  ClientWidth = 493
+  ClientWidth = 328
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -45,10 +45,10 @@ object Form2: TForm2
     Height = 73
   end
   object Image1: TImage
-    Left = 8
-    Top = 119
-    Width = 153
-    Height = 73
+    Left = 9
+    Top = 120
+    Width = 151
+    Height = 71
     Center = True
     Proportional = True
     Stretch = True
