@@ -14,14 +14,17 @@ object Form2: TForm2
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
-    Left = 288
-    Top = 88
-    Width = 73
+    Left = 8
+    Top = 119
+    Width = 105
     Height = 73
+    Center = True
+    Proportional = True
+    Stretch = True
   end
   object Button1: TButton
-    Left = 184
-    Top = 40
+    Left = 8
+    Top = 8
     Width = 75
     Height = 25
     Caption = 'Pick Color'
@@ -29,8 +32,8 @@ object Form2: TForm2
     OnClick = Button1Click
   end
   object colorPanel: TPanel
-    Left = 265
-    Top = 40
+    Left = 89
+    Top = 8
     Width = 24
     Height = 25
     Color = clHighlight
@@ -38,16 +41,16 @@ object Form2: TForm2
     TabOrder = 1
   end
   object RadioGroup1: TRadioGroup
-    Left = 104
-    Top = 71
-    Width = 57
-    Height = 66
-    Caption = 'Theme'
+    Left = 8
+    Top = 39
+    Width = 105
+    Height = 43
+    Caption = 'Mode'
     TabOrder = 2
   end
   object RadioButton1: TRadioButton
-    Left = 112
-    Top = 88
+    Left = 16
+    Top = 56
     Width = 41
     Height = 17
     Caption = 'Light'
@@ -56,17 +59,17 @@ object Form2: TForm2
     TabStop = True
   end
   object RadioButton2: TRadioButton
-    Left = 112
-    Top = 111
+    Left = 63
+    Top = 56
     Width = 41
     Height = 17
     Caption = 'Dark'
     TabOrder = 4
   end
   object wallpaperButton: TButton
-    Left = 184
-    Top = 107
-    Width = 75
+    Left = 8
+    Top = 88
+    Width = 105
     Height = 25
     Caption = 'Pick Wallpaper'
     TabOrder = 5
@@ -81,7 +84,7 @@ object Form2: TForm2
     FilterIndex = 0
     Options = [ofAllowMultiSelect, ofPathMustExist, ofFileMustExist, ofEnableSizing]
     Title = 'Select a wallpaper'
-    Left = 120
-    Top = 144
+    Left = 240
+    Top = 40
   end
 end

@@ -21,12 +21,9 @@ void __fastcall TForm2::Button1Click(TObject* Sender) {
     colorPanel->Color = ColorDialog1->Color;
 }
 //---------------------------------------------------------------------------
-void __fastcall TForm2::wallpaperButtonClick(TObject *Sender)
-{
+void __fastcall TForm2::wallpaperButtonClick(TObject* Sender) {
     OpenPictureDialog1->Filter = "Images (*.gif;*.png;*.jpg;*.jpeg;*.bmp;*.ico;*.emf;*.wmf;*.tif;*.tiff)|(*.gif;*.png;*.jpg;*.jpeg;*.bmp;*.ico;*.emf;*.wmf;*.tif;*.tiff)";
     OpenPictureDialog1->Execute();
     Image1->Picture->LoadFromFile(OpenPictureDialog1->FileName);
-    //TPicture->RegisterFileFormat('png', 'Portable Network Graphic', TPngImage);
 }
 //---------------------------------------------------------------------------
-
