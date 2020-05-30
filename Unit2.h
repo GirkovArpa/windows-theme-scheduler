@@ -11,6 +11,8 @@
 #include <Vcl.ColorGrd.hpp>
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.ExtDlgs.hpp>
+#include <Vcl.WinXPickers.hpp>
+#include <Vcl.Samples.Spin.hpp>
 //---------------------------------------------------------------------------
 class TForm2 : public TForm {
     __published :                       // IDE-managed Components
@@ -23,8 +25,20 @@ class TForm2 : public TForm {
 	TButton *wallpaperButton;
 	TImage *Image1;
 	TOpenPictureDialog *OpenPictureDialog1;
+	TSpinEdit *SpinEdit1;
+	TSpinEdit *SpinEdit2;
+	TRadioGroup *RadioGroup2;
+	TRadioButton *RadioButton3;
+	TRadioButton *RadioButton4;
+	TLabel *hourLabel;
+	TLabel *minuteLabel;
+	TButton *scheduleButton;
+	TListBox *ListBox1;
+	TEdit *nameTextbox;
+	TButton *buttonPreview;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall wallpaperButtonClick(TObject *Sender);
+	void __fastcall buttonPreviewClick(TObject *Sender);
                    private :            // User declarations
                               public :  // User declarations
                                         __fastcall TForm2(TComponent* Owner);

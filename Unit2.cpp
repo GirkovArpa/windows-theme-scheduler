@@ -27,3 +27,9 @@ void __fastcall TForm2::wallpaperButtonClick(TObject* Sender) {
     Image1->Picture->LoadFromFile(OpenPictureDialog1->FileName);
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm2::buttonPreviewClick(TObject *Sender)
+{
+//
+}
+//---------------------------------------------------------------------------
+
