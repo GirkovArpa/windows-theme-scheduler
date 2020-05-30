@@ -16,7 +16,7 @@ void loadDLLs() {
 }
 
 void changeColor(COLORREF color) {
-    loadDLLs();
+    //loadDLLs();
     HRESULT hr;
     IMMERSIVE_COLOR_PREFERENCE immersiveColorPref;
     hr = GetUserColorPreference(&immersiveColorPref, 0);

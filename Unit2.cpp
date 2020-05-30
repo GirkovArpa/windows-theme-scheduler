@@ -50,6 +50,7 @@ __fastcall TForm2::TForm2(TComponent* Owner) : TForm(Owner) {
     OKRightDlg = new TOKRightDlg(this);
 
     MainMenu1->Images = ImageList1;
+    loadDLLs();
 }
 //---------------------------------------------------------------------------
 
