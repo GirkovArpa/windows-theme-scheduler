@@ -57,7 +57,7 @@ void __fastcall TMyClass::Execute() {
     while (true) {
         updateTime();
         Synchronize([&]() {
-            checkSchedule();
+            checkSchedule(Hour, Min, AM);
         });
         Sleep(60'000);
     }

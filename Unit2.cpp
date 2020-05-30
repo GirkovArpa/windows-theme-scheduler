@@ -29,9 +29,12 @@ struct Theme {
 
 std::vector<Theme> themes;
 
-void checkSchedule() {
+void checkSchedule(int hour, int minute, bool am) {
     for (int i = 0; i < themes.size(); i++) {
-        
+        if (themes.at(i).hour == hour && themes.at(i).minute == minute && themes.at(i).AM == am) {
+            changeWallpaper(themes.at(i).filename.c_str(), themes.at(i).lightMode);
+            changeColor(themes.at(i).color);
+        }
     }
 }
 

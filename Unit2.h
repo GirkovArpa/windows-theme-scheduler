@@ -57,5 +57,5 @@ class TForm2 : public TForm {
 //---------------------------------------------------------------------------
 extern PACKAGE TForm2* Form2;
 //---------------------------------------------------------------------------
-void checkSchedule();
+void checkSchedule(int hour, int minute, bool am);
 #endif
