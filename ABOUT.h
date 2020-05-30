@@ -26,6 +26,7 @@ __published:
 	TLinkLabel *labelReddit;
 	TPanel *Panel2;
 	TLinkLabel *labelAttribution;
+	TImage *Image1;
 	void __fastcall OKButtonClick(TObject *Sender);
 	void __fastcall labelRedditLinkClick(TObject *Sender, const UnicodeString Link,
           TSysLinkType LinkType);

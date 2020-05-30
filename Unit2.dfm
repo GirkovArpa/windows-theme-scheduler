@@ -9693,15 +9693,15 @@ object Form2: TForm2
     Left = 336
     Top = 240
     object N1: TMenuItem
-      Caption = 'Help'
+      Caption = '&Help'
       Checked = True
       object About1: TMenuItem
-        Caption = 'Why doesn'#39't my color work?'
+        Caption = '&Why doesn'#39't my color work?'
         ImageIndex = 1
         OnClick = About1Click
       end
       object About3: TMenuItem
-        Caption = 'About'
+        Caption = '&About'
         ImageIndex = 0
         OnClick = About3Click
       end

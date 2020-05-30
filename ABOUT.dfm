@@ -3,13 +3,13 @@ object AboutBox: TAboutBox
   Top = 108
   BorderStyle = bsDialog
   Caption = 'About'
-  ClientHeight = 175
-  ClientWidth = 298
+  ClientHeight = 187
+  ClientWidth = 297
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = True
   Position = poScreenCenter
@@ -126,15 +126,16 @@ object AboutBox: TAboutBox
     object labelProductName: TLabel
       Left = 88
       Top = 16
-      Width = 131
+      Width = 128
       Height = 13
       Caption = 'Windows Theme Scheduler'
+      Transparent = True
       IsControl = True
     end
     object labelVersion: TLabel
-      Left = 225
+      Left = 222
       Top = 16
-      Width = 39
+      Width = 42
       Height = 13
       Caption = 'v0.0.0.1'
       IsControl = True
@@ -142,7 +143,7 @@ object AboutBox: TAboutBox
     object labelCopyright: TLabel
       Left = 88
       Top = 35
-      Width = 142
+      Width = 146
       Height = 13
       Caption = 'Copyright '#169' 2020 Girkov Arpa'
       IsControl = True
@@ -150,8 +151,8 @@ object AboutBox: TAboutBox
     object labelReddit: TLinkLabel
       Left = 88
       Top = 54
-      Width = 158
-      Height = 19
+      Width = 4
+      Height = 4
       Caption = 
         'Inspired by <a href="https://old.reddit.com/r/software/comments/' +
         'gsqhtr/looking_for_a_program_that_changes_system_theme/">this Re' +
@@ -164,7 +165,7 @@ object AboutBox: TAboutBox
     end
   end
   object OKButton: TButton
-    Left = 111
+    Left = 119
     Top = 103
     Width = 75
     Height = 25
@@ -175,21 +176,44 @@ object AboutBox: TAboutBox
     OnClick = OKButtonClick
   end
   object Panel2: TPanel
-    Left = 9
-    Top = 134
-    Width = 281
+    Left = 8
+    Top = 144
+    Width = 280
     Height = 35
     BevelInner = bvRaised
     BevelOuter = bvLowered
     ParentColor = True
     TabOrder = 2
-    object labelAttribution: TLinkLabel
-      Left = 87
+    object Image1: TImage
+      Left = 205
       Top = 8
-      Width = 120
-      Height = 17
-      Caption = 'Menu icons by <a href="http://www.aha-soft.com/">Aha-Soft</a>.'
+      Width = 16
+      Height = 16
+      Center = True
+      Picture.Data = {
+        0954506E67496D61676589504E470D0A1A0A0000000D49484452000000100000
+        00100803000000282D0F530000007E504C5445000000E96565CF0000D10101E4
+        3E3FF8A4A4D20606E84D4FF18586D40B0BF7B6B6F6D5D5EE8081EC6F71F5CDCD
+        EB676891E5FDBCE6F8C0E6F8B9E3F763BEE79FC79FC3DCC3B9D4B93A743D87E5
+        FE4DB5E488BB891A5C1FB5E3F756C0EC457E4943B2E7007ED11B92D753855500
+        2B000E4A1331A4E2A9DEF67FBEE897CFEE7185E4410000000174524E530040E6
+        D866000000874944415478DA65CEB10EC2201485E1F317A88D49131787C6D1C1
+        F77F1ADFC0C9C5895A307AA189C57887C3E51BE0201BA891EB5E22E490C13D37
+        902339B520F7D60F04482D043BBA65837D49C7E30BEDFCC3A1B482BB8E6B3BA6
+        68417FD369C1EE9E49718CBD0CB4747819587355907FA9C00EE60A0344833119
+        CF0643793D72A91F73D5795D3E6E6420DA3C92EA400000000049454E44AE4260
+        82}
+      Proportional = True
+      Stretch = True
+    end
+    object labelAttribution: TLinkLabel
+      Left = 67
+      Top = 8
+      Width = 132
+      Height = 19
+      Caption = 'Menu icons by <a href="http://www.aha-soft.com/">Aha-Soft</a>'
       TabOrder = 0
+      UseVisualStyle = True
       OnLinkClick = labelAttributionLinkClick
     end
   end
