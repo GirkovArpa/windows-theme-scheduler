@@ -48,7 +48,6 @@ class TForm2 : public TForm {
 	void __fastcall ListBox1Click(TObject *Sender);
 	void __fastcall deleteButtonClick(TObject *Sender);
 	void __fastcall ApplicationEvents1Minimize(TObject *Sender);
-	void __fastcall TrayIcon1Click(TObject *Sender);
 	void __fastcall TrayIcon1DblClick(TObject *Sender);
                    private :            // User declarations
                               public :  // User declarations

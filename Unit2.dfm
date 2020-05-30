@@ -1,9 +1,11 @@
 object Form2: TForm2
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Form2'
-  ClientHeight = 366
-  ClientWidth = 465
+  ClientHeight = 361
+  ClientWidth = 328
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +13,7 @@ object Form2: TForm2
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -120,7 +123,7 @@ object Form2: TForm2
     Top = 330
     Width = 153
     Height = 25
-    Caption = 'Preview'
+    Caption = 'Use Now'
     TabOrder = 9
     OnClick = buttonPreviewClick
   end
@@ -137,7 +140,9 @@ object Form2: TForm2
       Width = 47
       Height = 17
       Caption = 'Light'
+      Checked = True
       TabOrder = 0
+      TabStop = True
     end
     object darkRadio: TRadioButton
       Left = 104
@@ -161,7 +166,9 @@ object Form2: TForm2
       Width = 41
       Height = 17
       Caption = 'AM'
+      Checked = True
       TabOrder = 0
+      TabStop = True
     end
     object pmRadio: TRadioButton
       Left = 104
@@ -10283,7 +10290,6 @@ object Form2: TForm2
       BED6FAFE783CBE9365D9E7376EDCF89C88F61FF7352E13FF7F2F536C674E4F64
       E70000000049454E44AE426082}
     Visible = True
-    OnClick = TrayIcon1Click
     OnDblClick = TrayIcon1DblClick
     Left = 320
     Top = 32

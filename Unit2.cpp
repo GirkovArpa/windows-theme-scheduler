@@ -17,6 +17,8 @@
 #pragma resource "*.dfm"
 TForm2* Form2;
 
+int themeCount;
+
 struct Theme {
     COLORREF color;
     String filename;
@@ -62,6 +64,9 @@ void __fastcall TForm2::buttonPreviewClick(TObject* Sender) {
 //---------------------------------------------------------------------------
 
 void __fastcall TForm2::ListBox1Click(TObject* Sender) {
+    if (ListBox1->ItemIndex == -1) {
+        return;
+    }
     Theme theme = themes.at(ListBox1->ItemIndex);
     colorPanel->Color = (TColor)theme.color;
     Image1->Picture->LoadFromFile(theme.filename);
@@ -82,6 +87,13 @@ void __fastcall TForm2::ListBox1Click(TObject* Sender) {
 }
 
 void __fastcall TForm2::scheduleButtonClick(TObject* Sender) {
+    if (!FileExists(OpenPictureDialog1->FileName)) {
+        MessageDlg("No wallpaper image was selected.", mtError, TMsgDlgButtons() << mbOK, 0);
+        return;
+    }
+
+    themeCount++;
+
     struct Theme theme = {
         (COLORREF)colorPanel->Color,
         OpenPictureDialog1->FileName,
@@ -91,15 +103,16 @@ void __fastcall TForm2::scheduleButtonClick(TObject* Sender) {
         amRadio->Checked,
         nameBox->Text};
 
+    if (theme.name == "") {
+        theme.name = "theme " + IntToStr(themeCount);
+    }
+
     themes.push_back(theme);
     ListBox1->Items->Add(theme.name);
-
-    //String summary = UIntToStr((unsigned)color) + "\n" + filename + "\n" + IntToStr(lightMode) + "\n" + IntToStr(minute) + "\n" + name + "\n" + IntToStr(AM);
-    //ShowMessage(summary);
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm2::deleteButtonClick(TObject* Sender) {
-    if (ListBox1->GetCount() > 0) {
+    if (ListBox1->GetCount() > 0 && ListBox1->ItemIndex != -1) {
         themes.erase(themes.begin() + ListBox1->ItemIndex);
         ListBox1->DeleteSelected();
     }
@@ -109,10 +122,6 @@ void __fastcall TForm2::ApplicationEvents1Minimize(TObject* Sender) {
     Hide();
     WindowState = wsMinimized;
 }
-
-void __fastcall TForm2::TrayIcon1Click(TObject* Sender) {
-}
-
 void __fastcall TForm2::TrayIcon1DblClick(TObject* Sender) {
     Show();
     WindowState = wsNormal;
