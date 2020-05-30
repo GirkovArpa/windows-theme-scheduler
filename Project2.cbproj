@@ -147,6 +147,10 @@
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <CppCompile Include="Unit1.cpp">
+            <DependentOn>Unit1.h</DependentOn>
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
         <CppCompile Include="Unit2.cpp">
             <Form>Form2</Form>
             <FormType>dfm</FormType>

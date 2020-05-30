@@ -3,6 +3,7 @@
 #include <vcl.h>
 #pragma hdrstop
 
+#include "Unit1.h"
 #include "Unit2.h"
 #include <Jpeg.hpp>
 #include <pngimage.hpp>
@@ -28,9 +29,15 @@ struct Theme {
 
 std::vector<Theme> themes;
 
+void checkSchedule() {
+    for (int i = 0; i < themes.size(); i++) {
+        
+    }
+}
+
 //---------------------------------------------------------------------------
 __fastcall TForm2::TForm2(TComponent* Owner) : TForm(Owner) {
-    //ColorDialog1->Execute();
+    TMyClass* myThread = new TMyClass(false);
 }
 //---------------------------------------------------------------------------
 
@@ -95,20 +102,17 @@ void __fastcall TForm2::deleteButtonClick(TObject* Sender) {
     }
 }
 //---------------------------------------------------------------------------
-void __fastcall TForm2::ApplicationEvents1Minimize(TObject *Sender)
-{
+void __fastcall TForm2::ApplicationEvents1Minimize(TObject* Sender) {
     Hide();
     WindowState = wsMinimized;
 }
 
 void __fastcall TForm2::TrayIcon1Click(TObject* Sender) {
-
 }
 
-    void __fastcall TForm2::TrayIcon1DblClick(TObject* Sender) {
+void __fastcall TForm2::TrayIcon1DblClick(TObject* Sender) {
     Show();
     WindowState = wsNormal;
     Application->BringToFront();
 }
 //---------------------------------------------------------------------------
-
